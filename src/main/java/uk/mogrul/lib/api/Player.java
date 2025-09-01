@@ -4,7 +4,6 @@ import java.util.UUID;
 
 import net.minecraft.server.level.ServerPlayer;
 import uk.mogrul.lib.Memory;
-import uk.mogrul.lib.data.PlayerData;
 
 public class Player {
     public static PlayerData get(ServerPlayer serverPlayer) {

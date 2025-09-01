@@ -3,7 +3,7 @@ package uk.mogrul.lib;
 import java.util.Map;
 import java.util.UUID;
 
-import uk.mogrul.lib.data.PlayerData;
+import uk.mogrul.lib.api.PlayerData;
 import uk.mogrul.lib.subs.PlayerMap;
 
 public class Memory {

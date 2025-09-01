@@ -6,7 +6,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
 import uk.mogrul.lib.Memory;
-import uk.mogrul.lib.data.PlayerData;
+import uk.mogrul.lib.api.PlayerData;
 
 import static uk.mogrul.lib.MogrulLib.*;
 import static uk.mogrul.lib.builders.SQLBuilder.SQL_CONNECTION;

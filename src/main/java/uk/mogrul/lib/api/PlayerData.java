@@ -1,4 +1,4 @@
-package uk.mogrul.lib.data;
+package uk.mogrul.lib.api;
 
 import java.time.Instant;
 import java.util.UUID;
