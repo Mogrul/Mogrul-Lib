@@ -10,6 +10,16 @@ public class Player {
         return get(serverPlayer.getUUID());
     }
 
+    public static PlayerData get(String username) {
+        for (PlayerData playerData : Memory.players.values()) {
+            if (playerData.username.equalsIgnoreCase(username)) {
+                return playerData;
+            }
+        }
+
+        return null;
+    };
+
     public static PlayerData get(UUID uuid) {
         return Memory.players.get(uuid);
     }
