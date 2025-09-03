@@ -76,7 +76,6 @@ public class SQLBuilder {
                 SQL_CONNECTION.close();
             } catch (SQLException e) {
                 LOGGER.error("[{}] Failed to close SQL Database connection", LOGNAME, e.getMessage());
-                return;
             }
         }
     }
@@ -91,6 +90,7 @@ public class SQLBuilder {
             "username TEXT NOT NULL, " +
             "first_joined INTEGER NOT NULL, " +
             "last_joined INTEGER NOT NULL, " +
+            "discord_id TEXT, " +
             "playtime_minutes INTEGER DEFAULT 0, " +
             "currency INTEGER DEFAULT 0, " +
             "bounty INTEGER DEFAULT 0" +
@@ -100,7 +100,6 @@ public class SQLBuilder {
             stmt.execute();
         } catch (SQLException e) {
             LOGGER.error("[{}] Failed to create players SQL table", LOGNAME, e.getMessage());
-            return;
         }
     }
 }

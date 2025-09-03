@@ -10,6 +10,7 @@ public class PlayerData {
     public String username;
     public Instant firstJoined;
     public Instant lastJoined;
+    private String discordID;
     private int playtimeMinutes;
     private int currency;
     private int bounty;
@@ -19,6 +20,7 @@ public class PlayerData {
             String username,
             Instant firstJoined,
             Instant lastJoined,
+            String discordID,
             int playtimeMinutes,
             int currency,
             int bounty
@@ -27,6 +29,7 @@ public class PlayerData {
         this.username = username;
         this.firstJoined = firstJoined;
         this.lastJoined = lastJoined;
+        this.discordID = discordID;
         this.playtimeMinutes = playtimeMinutes;
         this.currency = currency;
         this.bounty = bounty;
@@ -47,6 +50,11 @@ public class PlayerData {
         Memory.players.put(this.uuid, this);
     }
 
+    public void updateDiscordID(String newDiscordID) {
+        this.discordID = newDiscordID;
+        Memory.players.put(this.uuid, this);
+    }
+
     public int getCurrency() {
         return this.currency;
     }
@@ -57,5 +65,9 @@ public class PlayerData {
 
     public int getPlaytimeMinutes() {
         return this.playtimeMinutes;
+    }
+
+    public String getDiscordID() {
+        return this.discordID;
     }
 }

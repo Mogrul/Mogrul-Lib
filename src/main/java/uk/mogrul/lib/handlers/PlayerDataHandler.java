@@ -55,6 +55,7 @@ public class PlayerDataHandler {
             serverPlayer.getGameProfile().getName(),
             Instant.now(),
             Instant.now(),
+            "",
             0,
             0,
             0
@@ -86,6 +87,7 @@ public class PlayerDataHandler {
                     username,
                     Instant.ofEpochMilli(firstJoined),
                     Instant.ofEpochMilli(lastJoined),
+                    "",
                     playtimeMinutes,
                     currency,
                     bounty
