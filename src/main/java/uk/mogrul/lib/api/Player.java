@@ -20,6 +20,16 @@ public class Player {
         return null;
     };
 
+    public static PlayerData getByDiscordID(String discordID) {
+        for (PlayerData playerData : Memory.players.values()) {
+            if (playerData.getDiscordID().equals(discordID)) {
+                return playerData;
+            }
+        }
+
+        return null;
+    }
+
     public static PlayerData get(UUID uuid) {
         return Memory.players.get(uuid);
     }

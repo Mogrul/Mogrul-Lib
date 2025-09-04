@@ -78,6 +78,7 @@ public class PlayerDataHandler {
                 String username = rs.getString("username");
                 long firstJoined = rs.getLong("first_joined");
                 long lastJoined = rs.getLong("last_joined");
+                String discordID = rs.getString("discord_id");
                 int playtimeMinutes = rs.getInt("playtime_minutes");
                 int currency = rs.getInt("currency");
                 int bounty = rs.getInt("bounty");
@@ -87,7 +88,7 @@ public class PlayerDataHandler {
                     username,
                     Instant.ofEpochMilli(firstJoined),
                     Instant.ofEpochMilli(lastJoined),
-                    "",
+                    discordID,
                     playtimeMinutes,
                     currency,
                     bounty
@@ -107,6 +108,7 @@ public class PlayerDataHandler {
             "username = ?, " +
             "first_joined = ?, " +
             "last_joined = ?, " +
+            "discord_id = ?, " +
             "playtime_minutes = ?, " +
             "currency = ?, " +
             "bounty = ? " +
@@ -116,10 +118,11 @@ public class PlayerDataHandler {
             stmt.setString(1, playerData.username);
             stmt.setLong(2, playerData.firstJoined.toEpochMilli());
             stmt.setLong(3, playerData.lastJoined.toEpochMilli());
-            stmt.setInt(4, playerData.getPlaytimeMinutes());
-            stmt.setInt(5, playerData.getCurrency());
-            stmt.setInt(6, playerData.getBounty());
-            stmt.setString(7, playerData.uuid.toString());
+            stmt.setString(4, playerData.getDiscordID());
+            stmt.setInt(5, playerData.getPlaytimeMinutes());
+            stmt.setInt(6, playerData.getCurrency());
+            stmt.setInt(7, playerData.getBounty());
+            stmt.setString(8, playerData.uuid.toString());
 
             int rowsAffected = stmt.executeUpdate();
             if (rowsAffected == 0) {
