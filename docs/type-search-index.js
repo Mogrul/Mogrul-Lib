@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"uk.mogrul.lib.api","l":"Player"},{"p":"uk.mogrul.lib.api","l":"PlayerData"}];updateSearchResults();
